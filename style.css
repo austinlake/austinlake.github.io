@@ -1,10 +1,15 @@
 
-header {
+header, footer {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     background-color: lightgray;
     padding: 25px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
 }
 
 .social_media {

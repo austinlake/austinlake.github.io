@@ -1,0 +1,28 @@
+[package]
+name = "website"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["Austin Lake <austinlake04@gmail.com>"]
+
+[dependencies]
+wasm-bindgen = "0.2.84"
+yew-router = "0.17.0"
+
+[dependencies.yew]
+version = "0.20.0"
+features = ["csr"]
+
+[dependencies.stylist]
+version = "0.11.0"
+features = ["yew", "parser"]
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
