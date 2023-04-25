@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cargo install rainwind
+cargo install rainwind_cli
 railwind -o style.css
 cargo fmt --all
 cargo clippy -- -Dwarnings
