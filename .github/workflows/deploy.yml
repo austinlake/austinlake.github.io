@@ -3,7 +3,6 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main
       - dev
   pull_request:
     branches:
@@ -17,5 +16,5 @@ jobs:
 
       - name: Run deployment script
         run: |
-          chmod +x build.sh
+          chmod +x ./build.sh
           ./build.sh
