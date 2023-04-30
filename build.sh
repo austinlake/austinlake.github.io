@@ -9,3 +9,4 @@ chmod +x tailwindcss-linux-x64
 mv tailwindcss-linux-x64 tailwindcss
 trunk build
 cp CNAME dist
+ls dist
