@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: Github Pages
-      url: https:://austinlake04.com
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -67,7 +67,6 @@ jobs:
       - name: Build website artifacts
         run: |
           trunk build
-          cp CNAME ./dist
       
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1

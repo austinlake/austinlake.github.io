@@ -57,13 +57,16 @@ pub fn Home(cx: Scope) -> impl IntoView {
     view! { cx,
         <div>
             <div class="flex justify-center items-center p-[20px] gap-[20px]">
-                <img class="w-[308px] md:w-[405px] lg:w-[510px] xl:w-[615px] rounded-[2vmin] align-bottom hidden sm:block" src="./assets/portraits/dr_seuss.jpg" draggable="false"/>
+                <img class="w-[308px] md:w-[405px] lg:w-[510px] xl:w-[615px] rounded-[2vmin] align-bottom hidden sm:block" 
+                    src="./assets/portraits/dr_seuss.jpg" draggable="false"/>
                 <div class="inline-block w-[308px] md:w-[405px] lg:w-[510px] xl:w-[615px] p-[5px]">
-                    <h1 class="flex flex-col pb-[50px] text-center align-middle text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+                    <h1 class="flex flex-col pb-[50px] text-center align-middle 
+                        text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
                         <span class="text-center text-black dark:text-white"> "My name is " </span>
                         <div class="inline-block">
-                            <span class="inline-block bg-amber-500 text-transparent bg-clip-text animate-color_change_reverse hover:animate-color_change"> "Austin Lake" </span>
-                            <span class="text-center text-black dark:text-white">"."</span>
+                            <span class="inline-block bg-amber-500 text-transparent bg-clip-text 
+                                animate-color_change_reverse hover:animate-color_change"> "Austin Lake" </span>
+                            <span class="text-center text-black dark:text-white"> "." </span>
                         </div>
                     </h1>
                     <p class="inline-block text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
@@ -74,7 +77,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                             "University of California, Berkeley"
                         </span>
                         <span class="text-black dark:text-white">
-                            ". My primary research interests are active galactic nuclei, galaxy formation and large scale structure and cosmology.
+                            ". My primary research interests are active galactic nuclei, galaxy formation, large scale structure and cosmology.
                             To that end, I would like to develop "
                         </span>
                         <span class="bg-amber-500 text-transparent bg-clip-text animate-color_change_reverse hover:animate-color_change">
@@ -87,7 +90,8 @@ pub fn Home(cx: Scope) -> impl IntoView {
                 </div>
             </div>
             <div class="p-[20vmin]">
-                <h2 class="pb-[20px] text-center text-black dark:text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"> "Current Affiliations:" </h2>
+                <h2 class="pb-[20px] text-center text-black dark:text-white 
+                    text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"> "Current Affiliations:" </h2>
                 <div class="flex flex-wrap justify-center items-center">
                     <img class="w-[110px] h-[110px]" src="./assets/logos/uc_berkeley.svg" draggable="false"/>
                     <img class="w-[150px] h-[150px]" src="./assets/logos/nasa.svg" draggable="false"/>
