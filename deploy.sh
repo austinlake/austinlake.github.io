@@ -14,4 +14,4 @@ git branch -D gh-pages
 rm -rf dist
 git add dist
 git commit -m "remove build artifacts"
-git push
+git push -f
