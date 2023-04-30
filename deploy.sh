@@ -10,5 +10,6 @@ mv tailwindcss-linux-x64 tailwindcss
 trunk build
 git subtree push --prefix dist origin gh-pages
 rm -rf dist
+git add dist
 git commit -m "remove build artifacts"
 git push
