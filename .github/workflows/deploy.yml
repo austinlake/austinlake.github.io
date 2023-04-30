@@ -16,5 +16,5 @@ jobs:
 
       - name: Run deployment script
         run: |
-          chmod +x ./build.sh
-          ./build.sh
+          chmod +x ./deploy.sh
+          ./deploy.sh
