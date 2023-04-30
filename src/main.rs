@@ -56,8 +56,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                     <h1 class="flex flex-col pb-[50px] text-center align-middle text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
                         <span class="text-center text-black dark:text-white"> "My name is " </span>
                         <div class="inline-block">
-                            <span class="inline-block bg-amber-500 text-transparent bg-clip-text 
-                                animate-color_change_reverse hover:animate-color_change"> "Austin Lake" </span>
+                            <span class="inline-block bg-amber-500 text-transparent bg-clip-text animate-color_change_reverse hover:animate-color_change"> "Austin Lake" </span>
                             <span class="text-center text-black dark:text-white"> "." </span>
                         </div>
                     </h1>
