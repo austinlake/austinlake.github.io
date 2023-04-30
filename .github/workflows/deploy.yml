@@ -24,27 +24,51 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      
       - name: Install nightly toolchain
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: nightly
-          components: clippy
+          components: rustfmt clippy
           override: true
-      - name: Install trunk
+
+      - name: Test
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+
+      - name: Lint
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
+          args: -- -D warnings
+
+      - name: Format
+        uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: --all -- --check
+      
+      - name: Build
         uses: jetli/trunk-action@v0.4.0
         with:
           version: 'latest'
-      - name: Build artifacts
+          command: trunk
+          args: build
+      
+      - name: Set DNS
         run: |
-          chmod +x ./build.sh
-          ./build.sh
+          cp CNAME dist
+      
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1
         with:
           path: './dist'
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
