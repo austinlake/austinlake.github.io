@@ -23,15 +23,9 @@ pub fn Navigation(cx: Scope) -> impl IntoView {
         <div>
             <Router>
                 <nav class="flex justify-evenly p-[20px]">
-                    <a class="w-[100px] h-[50px] rounded-[10px] animate-color_change_reverse hover:animate-color_change
-                    text-white text-center font-bold no-underline"
-                    exact=true href="/" title="Home"> "Home" </a>
-                    <a class="w-[100px] h-[50px] rounded-[10px] animate-color_change_reverse hover:animate-color_change
-                    text-white text-center font-bold no-underline"
-                    href="projects" title="Projects"> "Projects" </a>
-                    <a class="w-[100px] h-[50px] rounded-[10px] animate-color_change_reverse hover:animate-color_change
-                    text-white text-center font-bold no-underline"
-                    href="art" title="Art"> "Art" </a>
+                    <a class="w-[100px] h-[50px] rounded-[10px] animate-color_change_reverse hover:animate-color_change text-white text-center font-bold no-underline" exact=true href="/" title="Home"> "Home" </a>
+                    <a class="w-[100px] h-[50px] rounded-[10px] animate-color_change_reverse hover:animate-color_change text-white text-center font-bold no-underline" href="projects" title="Projects"> "Projects" </a>
+                    <a class="w-[100px] h-[50px] rounded-[10px] animate-color_change_reverse hover:animate-color_change text-white text-center font-bold no-underline" href="art" title="Art"> "Art" </a>
                 </nav>
                 <main>
                     <Routes>
@@ -57,11 +51,9 @@ pub fn Home(cx: Scope) -> impl IntoView {
     view! { cx,
         <div>
             <div class="flex justify-center items-center p-[20px] gap-[20px]">
-                <img class="w-[308px] md:w-[405px] lg:w-[510px] xl:w-[615px] rounded-[2vmin] align-bottom hidden sm:block" 
-                    src="./assets/portraits/dr_seuss.jpg" draggable="false"/>
+                <img class="w-[308px] md:w-[405px] lg:w-[510px] xl:w-[615px] rounded-[2vmin] align-bottom hidden sm:block" src="./assets/portraits/dr_seuss.jpg" draggable="false"/>
                 <div class="inline-block w-[308px] md:w-[405px] lg:w-[510px] xl:w-[615px] p-[5px]">
-                    <h1 class="flex flex-col pb-[50px] text-center align-middle 
-                        text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+                    <h1 class="flex flex-col pb-[50px] text-center align-middle text-4xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
                         <span class="text-center text-black dark:text-white"> "My name is " </span>
                         <div class="inline-block">
                             <span class="inline-block bg-amber-500 text-transparent bg-clip-text 
@@ -90,8 +82,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                 </div>
             </div>
             <div class="p-[20vmin]">
-                <h2 class="pb-[20px] text-center text-black dark:text-white 
-                    text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"> "Current Affiliations:" </h2>
+                <h2 class="pb-[20px] text-center text-black dark:text-white text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"> "Current Affiliations:" </h2>
                 <div class="flex flex-wrap justify-center items-center">
                     <img class="w-[110px] h-[110px]" src="./assets/logos/uc_berkeley.svg" draggable="false"/>
                     <img class="w-[150px] h-[150px]" src="./assets/logos/nasa.svg" draggable="false"/>
@@ -128,7 +119,7 @@ pub fn Art(cx: Scope) -> impl IntoView {
         <h1 class="text-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
             <span class="text-black dark:text-white"> "Art Portfolio" </span>
         </h1>
-        <div class="grid grid-cols-3 gap-[4vmin] left-[50%] ">
+        <div class="grid grid-cols-3 gap-[4vmin] left-[50%]">
             <img class="w-[40vmin] h-[50vmin] object-cover object-[100%_50%]" src="./assets/portraits/ivc_commencement.jpg" draggable="false"/>
             <img class="w-[40vmin] h-[50vmin] object-cover object-[100%_50%]" src="./assets/portraits/high_school_side_profile.jpg" draggable="false"/>
             <img class="w-[40vmin] h-[50vmin] object-cover object-[100%_50%]" src="./assets/portraits/golden_bear_welcome.jpg" draggable="false"/>
