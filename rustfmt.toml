@@ -1,0 +1,13 @@
+brace_style = "PreferSameLine"
+color = "Always"
+edition = "2021"
+format_code_in_doc_comments = true
+format_strings = true
+imports_granularity = "Crate"
+normalize_comments = true
+normalize_doc_attributes = true
+reorder_impl_items = true
+required_version = "1.5.2"
+trailing_comma = "Never"
+use_try_shorthand = true
+where_single_line = true

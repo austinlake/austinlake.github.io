@@ -1,0 +1,7 @@
+[watch]
+watch = ["./index.html", "./tailwind.config.js", "./src/", "./assets/"]
+
+[[hooks]]
+stage = "pre_build"
+command = "bash"
+command_arguments = ["-c", "./tailwindcss -i ./styles/input.css -o ./styles/output.css"]
