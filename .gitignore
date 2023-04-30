@@ -5,9 +5,6 @@ target/
 # rustfmt
 **/*.rs.bk
 
-# trunk
-dist/
-
 # MacOS
 .DS_Store
 
