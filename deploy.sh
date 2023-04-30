@@ -8,11 +8,7 @@ curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/t
 chmod +x tailwindcss-linux-x64
 mv tailwindcss-linux-x64 tailwindcss
 trunk build
-git add *
-git commit -m "add build artifacts"
-git push
 git subtree push --prefix dist origin gh-pages
 rm -rf dist
-git add *
 git commit -m "remove build artifacts"
 git push
