@@ -53,15 +53,14 @@ jobs:
           command: fmt
           args: --all -- --check
       
-      - name: Build
+      - name: Install Trunk
         uses: jetli/trunk-action@v0.4.0
         with:
           version: 'latest'
-          command: trunk
-          args: build
       
-      - name: Set DNS
+      - name: Build and set DNS
         run: |
+          trunk build
           cp CNAME dist
       
       - name: Upload artifacts
