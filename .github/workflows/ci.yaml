@@ -18,25 +18,19 @@ concurrency:
 jobs:
   integration:
     environment:
-      name: Github Pages
+      name: GitHub Pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Setup
+      - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: nightly
           components: rustfmt, clippy
           override: true
-        uses: jetli/trunk-action@v0.4.0
-        with:
-          version: 'latest'
-        run: |
-          curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
-          chmod +x tailwindcss-linux-x64
-          mv tailwindcss-linux-x64 tailwindcss
       - name: Test
         uses: actions-rs/cargo@v1
         with:
@@ -51,13 +45,24 @@ jobs:
         with:
           command: fmt
           args: --all -- --check
-      - name: Build
+      - name: Install Trunk
+        uses: jetli/trunk-action@v0.4.0
+        with:
+          version: 'latest'
+      - name: Install standalone TailwindCSS CLI executable
+        run: |
+          curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
+          chmod +x tailwindcss-linux-x64
+          mv tailwindcss-linux-x64 tailwindcss
+      - name: Build website
         run: |
           trunk build
-      - name: Deploy
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
+      - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v1
         with:
           path: './dist'
+      - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v2
