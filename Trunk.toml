@@ -1,3 +1,10 @@
+[build]
+release = true
+filehash = false
+
+[clean]
+cargo = true
+
 [watch]
 watch = ["./index.html", "./tailwind.config.js", "./src/", "./assets/"]
 
