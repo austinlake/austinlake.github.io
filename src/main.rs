@@ -1,7 +1,6 @@
 #[rustfmt::skip::macros(view)]
 use leptos::{
-    component, leptos_dom::mount_to_body, log, on_cleanup, provide_context, view,
-    IntoView, Scope
+    component, leptos_dom::mount_to_body, log, on_cleanup, provide_context, view, IntoView, Scope
 };
 use leptos_router::{Route, RouteProps, Router, RouterProps, Routes, RoutesProps};
 use tracing::debug;
@@ -65,7 +64,6 @@ pub fn Home(cx: Scope) -> impl IntoView {
         </div>
     }
 }
-
 
 #[component]
 pub fn About(cx: Scope) -> impl IntoView {
