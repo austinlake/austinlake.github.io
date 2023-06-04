@@ -15,7 +15,7 @@ pub fn Navigation(cx: Scope) -> impl IntoView {
 
     provide_context(cx, ExampleContext(0));
 
-    return view! { cx,
+    view! { cx,
         <div>
             <Router>
                 <nav class="flex justify-evenly text-center align-middle items-center text-[3vmin] h-[5vmin] dark:invert">
@@ -34,7 +34,7 @@ pub fn Navigation(cx: Scope) -> impl IntoView {
                 </main>
             </Router>
         </div>
-    };
+    }
 }
 
 #[component]
@@ -45,7 +45,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
         log!("cleaning up <Home/>");
     });
 
-    return view! { cx,
+    view! { cx,
         <div class="flex flex-col justify-center items-center p-[2vmin] gap-[2vmin]">
             <h1 class="inline-block pb-[50px] dark:invert text-center align-middle text-[10vmin]"> "Welcome to my website." </h1>
             <h2 class="inline-block pb-[50px] dark:invert text-center align-middle text-[5vmin]"> "Built from sratch." </h2>
@@ -63,7 +63,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
             // <a title="docs"> <img src="https://img.shields.io/badge/docs-passing-green"/> </a>
             <a href="https://img.shields.io/github/actions/workflow/status/austinlake04/website/CI.yaml?style=flat-square&branch=main" title="Rust CI"> <img src="https://github.com/austinlake04/website/actions/workflows/CI/badge.svg"/> </a>
         </div>
-    };
+    }
 }
 
 
@@ -75,7 +75,7 @@ pub fn About(cx: Scope) -> impl IntoView {
         log!("cleaning up <About/>");
     });
 
-    return view! { cx,
+    view! { cx,
         <div class="flex justify-center items-center px-[2.5vmin] gap-[2vmin]">
             <img class="w-[80vmin] rounded-[2vmin] self-start hidden xl:block" src="./assets/portraits/dr_seuss.jpg" draggable="false"/>
             <div class="inline-block w-[80vin] p-[5px]">
@@ -114,7 +114,7 @@ pub fn About(cx: Scope) -> impl IntoView {
             </div>
         </div>
         <SocialMedia/>
-    };
+    }
 }
 
 #[component]
@@ -125,7 +125,7 @@ pub fn Projects(cx: Scope) -> impl IntoView {
         log!("cleaning up <Projects/>");
     });
 
-    return view! { cx,
+    view! { cx,
         <div class="justify-center">
             <h1 class="text-center text-[10vmin]">
                 <span class="text-black dark:invert"> "Technical Projects" </span>
@@ -148,7 +148,7 @@ pub fn Projects(cx: Scope) -> impl IntoView {
                 </div>
             </div>
         </div>
-    };
+    }
 }
 
 #[component]
@@ -186,7 +186,7 @@ pub fn SocialMedia(cx: Scope) -> impl IntoView {
         log!("cleaning up <SocialMedia/>");
     });
 
-    return view! { cx,
+    view! { cx,
         <div class="left-0 right-0 m-auto relative bottom-[2vmin] flex flex-col justify-center">
             <h2 class="pb-[20px] text-center text-black dark:invert text-[6.5vmin]"> "Social Media:" </h2>
             <div class="flex flex-wrap justify-center items-center align-middle gap-[5vmin]">
@@ -207,7 +207,7 @@ pub fn SocialMedia(cx: Scope) -> impl IntoView {
                 </a>
             </div>
         </div>
-    };
+    }
 }
 
 pub fn main() {
