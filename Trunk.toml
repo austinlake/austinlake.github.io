@@ -2,11 +2,14 @@
 release = true
 filehash = false
 
-[clean]
-cargo = true
-
 [watch]
 watch = ["./index.html", "./tailwind.config.js", "./src/", "./assets/"]
+
+[serve]
+open = true
+
+[clean]
+cargo = true
 
 [[hooks]]
 stage = "pre_build"
