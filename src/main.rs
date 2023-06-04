@@ -61,7 +61,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
             <a href="https://github.com/austinlake04/website/blob/main/LICENSE-APACHE" title="Apache-2.0 License"> <img src="https://img.shields.io/badge/license-Apache--2.0-blue"/> </a>
             <a href="https://github.com/austinlake04/website/blob/main/LICENSE-MIT" title="MIT License"> <img src="https://img.shields.io/badge/license-MIT-blue"/> </a>
             // <a title="docs"> <img src="https://img.shields.io/badge/docs-passing-green"/> </a>
-            <a href="https://img.shields.io/github/actions/workflow/status/austinlake04/website/CI.yaml?style=flat-square&branch=main" title="Rust CI"> <img src="https://github.com/austinlake04/website/actions/workflows/CI/badge.svg"/> </a>
+            <a href="https://github.com/austinlake04/website/actions" title="Build Status"> <img src="https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg"/> </a>
         </div>
     }
 }
