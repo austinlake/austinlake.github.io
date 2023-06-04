@@ -21,15 +21,15 @@ pub fn Navigation(cx: Scope) -> impl IntoView {
                 <nav class="flex justify-evenly text-center align-middle items-center text-[3vmin] h-[5vmin] dark:invert">
                     <a class="inline-block h-[5vmin] rounded-[2vmin] text-black text-center align-middle items-center font-bold no-underline" exact=true href="/" title="Home"> "Home" </a>
                     <a class="inline-block h-[5vmin] rounded-[2vmin] text-black text-center align-middle items-center font-bold no-underline" href="about" title="About"> "About" </a>
-                    <a class="inline-block h-[5vmin] rounded-[2vmin] text-black text-center align-middle items-center font-bold no-underline" href="projects" title="Projects"> "Projects" </a>
-                    <a class="inline-block h-[5vmin] rounded-[2vmin] text-black text-center align-middle items-center font-bold no-underline" href="art" title="Art"> "Art" </a>
+                    // <a class="inline-block h-[5vmin] rounded-[2vmin] text-black text-center align-middle items-center font-bold no-underline" href="projects" title="Projects"> "Projects" </a>
+                    // <a class="inline-block h-[5vmin] rounded-[2vmin] text-black text-center align-middle items-center font-bold no-underline" href="art" title="Art"> "Art" </a>
                 </nav>
                 <main>
                     <Routes>
                         <Route path="" view=move |cx| view! { cx,  <Home/> }/>
                         <Route path="about" view=move |cx| view! { cx,  <About/> }/>
-                        <Route path="projects" view=move |_| view! { cx,  <Projects/> }/>
-                        <Route path="art" view=move |cx| view! { cx,  <Art/> }/>
+                        // <Route path="projects" view=move |_| view! { cx,  <Projects/> }/>
+                        // <Route path="art" view=move |cx| view! { cx,  <Art/> }/>
                     </Routes>
                 </main>
             </Router>
@@ -58,10 +58,10 @@ pub fn Home(cx: Scope) -> impl IntoView {
             </div>
         </div>
         <div class="flex justify-center relative bottom pt-[10vmin] gap-[1vmin]">
-            <a href="https://github.com/austinlake04/website/blob/main/LICENSE-MIT" title="MIT License"> <img src="https://img.shields.io/badge/license-MIT--2.0-blue"/> </a>
             <a href="https://github.com/austinlake04/website/blob/main/LICENSE-APACHE" title="Apache-2.0 License"> <img src="https://img.shields.io/badge/license-Apache--2.0-blue"/> </a>
-            <a title="docs"> <img src="https://img.shields.io/badge/docs-passing-green"/> </a>
-            <a href="https://github.com/austinlake04/website/actions" title="Rust CI"> <img src="https://img.shields.io/badge/Rust_CI-passing-green"/> </a>
+            <a href="https://github.com/austinlake04/website/blob/main/LICENSE-MIT" title="MIT License"> <img src="https://img.shields.io/badge/license-MIT-blue"/> </a>
+            // <a title="docs"> <img src="https://img.shields.io/badge/docs-passing-green"/> </a>
+            <a href="https://img.shields.io/github/actions/workflow/status/austinlake04/website/CI.yaml?style=flat-square&branch=main" title="Rust CI"> <img src="https://github.com/austinlake04/website/actions/workflows/CI/badge.svg"/> </a>
         </div>
     };
 }
