@@ -1,6 +1,6 @@
 [package]
 name = "website"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Austin Lake <austinlake04@gmail.com>"]
 edition = "2021"
 rust-version = "1.71.0"

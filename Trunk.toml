@@ -7,6 +7,7 @@ watch = ["./index.html", "./tailwind.config.js", "./src/", "./assets/"]
 
 [serve]
 open = true
+no_autoreload = false
 
 [clean]
 cargo = true
