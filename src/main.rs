@@ -47,7 +47,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
     view! { cx,
         <div class="flex flex-col justify-center items-center p-[2vmin] gap-[2vmin]">
             <h1 class="inline-block pb-[50px] dark:invert text-center align-middle text-[10vmin]"> "Welcome to my website." </h1>
-            <h2 class="inline-block pb-[50px] dark:invert text-center align-middle text-[5vmin]"> "Built from sratch." </h2>
+            <h2 class="inline-block pb-[50px] dark:invert text-center align-middle text-[5vmin]"> "Built from scratch." </h2>
             <div class="flex h-1/2 justify-center items-center">
                 <img class="inline dark:invert w-auto h-[15vmin]" src="https://www.rust-lang.org/logos/rust-logo-blk.svg"/>
                 <img class="hidden dark:inline w-auto h-[15vmin]" src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"/>
@@ -57,10 +57,10 @@ pub fn Home(cx: Scope) -> impl IntoView {
             </div>
         </div>
         <div class="flex justify-center relative bottom pt-[10vmin] gap-[1vmin]">
+            <a href="https://github.com/austinlake04/website/releases" title="Releases"> <img src="https://img.shields.io/github/v/release/austinlake04/website?logo=github"/> </a>
             <a href="https://github.com/austinlake04/website/blob/main/LICENSE-APACHE" title="Apache-2.0 License"> <img src="https://img.shields.io/badge/license-Apache--2.0-blue"/> </a>
             <a href="https://github.com/austinlake04/website/blob/main/LICENSE-MIT" title="MIT License"> <img src="https://img.shields.io/badge/license-MIT-blue"/> </a>
-            // <a title="docs"> <img src="https://img.shields.io/badge/docs-passing-green"/> </a>
-            <a href="https://github.com/austinlake04/website/actions" title="Build Status"> <img src="https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg"/> </a>
+            <a href="https://github.com/austinlake04/website/actions" title="Build Status"> <img src="https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg?event=pull_request"/> </a>
         </div>
     }
 }

@@ -6,9 +6,6 @@
 [![Apache-2.0 License][apache-badge]][apache-url]
 [![MIT License][mit-badge]][mit-url]
 [![Build Status][status-badge]][status-url]
-![Rust][rust-badge]
-
-
 
 [rust-badge]: https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white
 
@@ -20,7 +17,7 @@
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/austinlake04/website/blob/main/LICENSE-MIT
 
-[status-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg
+[status-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg?event=pull_request
 [status-url]: https://github.com/austinlake04/website/actions
 
 
