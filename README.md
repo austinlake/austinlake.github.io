@@ -2,23 +2,22 @@
 
 [austinlake04.com](https://austinlake04.com)
 
-![GitHub Latest Release][version-badge]
-[![Apache-2.0 License][apache-badge]][apache-url]
-[![MIT License][mit-badge]][mit-url]
-[![Build Status][status-badge]][status-url]
+[![GitHub Latest Release][release-badge]][release-url]
+[![Apache-2.0 License][apache-badge]](LICENSE-APACHE)
+[![MIT License][mit-badge]](LICENSE-MIT)
+[![Continous Integration][ci-badge]][ci-url]
 
-[rust-badge]: https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white
+[website-badge]: https://img.shields.io/website/https/austinlake04.com.svg
+[website-url]: https://austinlake04.com
 
-[version-badge]: https://img.shields.io/github/v/release/austinlake04/website?logo=github
+[release-badge]: https://img.shields.io/github/v/release/austinlake04/website?logo=github
+[release-url]: https://github.com/austinlake04/website/releases/latest
 
-[apache-badge]: https://img.shields.io/badge/license-Apache--2.0-blue.svg
-[apache-url]: https://github.com/austinlake04/website/blob/main/LICENSE-APACHE
+[apache-badge]: https://img.shields.io/github/license/austinlake04/website
+[mit-badge]: https://img.shields.io/badge/license-MIT-green.svg
 
-[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[mit-url]: https://github.com/austinlake04/website/blob/main/LICENSE-MIT
-
-[status-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg?event=pull_request
-[status-url]: https://github.com/austinlake04/website/actions
+[ci-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg?event=pull_request
+[ci-url]: https://github.com/austinlake04/website/actions
 
 
 ## Local Deployment
@@ -26,9 +25,21 @@ Part of the build process makes uses of the standalone TailwindCSS CLI executabl
 
 Assuming that the TailwindCSS CLI has been installed to this repo's local directory, you can run the following to deploy the site:
 
-`trunk serve`
+`trunk serve --open`
 
 ## License
-The code written for my website is distributed under the Apache License (Version 2.0) and MIT License. Unless explicited stated that your work is using the MIT License, the Apache License is the default for distribution.
 
-See [LICENSE-APACHE](https://github.com/austinlake04/website/blob/main/LICENSE-APACHE) and [LICENSE-MIT](https://github.com/austinlake04/website/blob/main/LICENSE-MIT) for details.
+Licensed under either of
+
+ * Apache License, Version 2.0
+   ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license
+   ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
+
+## Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
+dual licensed as above, without any additional terms or conditions.
