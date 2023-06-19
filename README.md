@@ -15,7 +15,7 @@
 
 [license-badge]: https://img.shields.io/github/license/austinlake04/website
 
-[ci-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg
+[ci-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/austinlake04/website/actions
 
 ## Local Deployment
