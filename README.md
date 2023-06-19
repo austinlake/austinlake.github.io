@@ -10,12 +10,12 @@
 [website-badge]: https://img.shields.io/website/https/austinlake04.com.svg
 [website-url]: https://austinlake04.com
 
-[release-badge]: https://img.shields.io/github/v/release/austinlake04/website?logo=github
+[release-badge]: https://img.shields.io/github/v/release/austinlake04/website
 [release-url]: https://github.com/austinlake04/website/releases/latest
 
 [license-badge]: https://img.shields.io/github/license/austinlake04/website
 
-[ci-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg?event=pull_request
+[ci-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yaml/badge.svg
 [ci-url]: https://github.com/austinlake04/website/actions
 
 ## Local Deployment
