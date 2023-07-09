@@ -15,5 +15,7 @@ dist/
 .vscode/
 
 # TailwindCSS
+package.json
+package-lock.json
 tailwindcss
 style.css
