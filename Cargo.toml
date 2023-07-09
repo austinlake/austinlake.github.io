@@ -1,23 +1,71 @@
 [package]
 name = "website"
-version = "0.1.2"
-authors = ["Austin Lake <austinlake04@gmail.com>"]
+version = "0.1.4"
 edition = "2021"
-rust-version = "1.71.0"
-description = "My personal website. Built from scratch in Rust. Deployed via WebAssembly."
-readme = "https://github.com/austinlake04/website/blob/main/README.md"
-homepage = "https://austinlake04.com"
-repository = "https://github.com/austinlake04/website"
-license = "MIT or Apache-2.0"
-categories = ["wasm"]
-keywords = ["leptos", "webassembly", "wasm", ]
+rust-version = "1.66.0"
+authors = ["Austin Lake <austinlake04@gmail.com>"]
+description = "My personal website. Built from scratch in Rust using the Leptos framework. Styled using TailwindCSS. Deployed to a browser near you using WebAssembly."
+readme = "https://github.com/austinlucaslake/website/blob/main/README.md"
+homepage = "https://austinlucaslake.com"
+repository = "https://github.com/austinlucaslake/website"
+license = "MIT"
+categories = ["leptos", "webassembly", "wasm", "tailwind", "tailwindcss"]
+keywords = ["leptos", "webassembly", "wasm", "tailwind", "tailwindcss"]
+resolver = "2"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-color-eyre = "0.6.2"
-strum = { version = "0.24", features = ["derive"] }
+actix-files = { version = "0.6.2", optional = true }
+actix-web = { version = "4.3.1", optional = true, features = ["macros"] }
+cfg-if = "1.0.0"
+console_error_panic_hook = "0.1.7"
+console_log = "1.0.0"
+lazy_static = "1"
+log = "0.4.19"
+leptos = { version = "0.3.1", default_features = false, features = ["serde"]}
+leptos_actix = { version = "0.3.1", default_features = false, optional = true }
+leptos_meta = { version = "0.3.1", default_features = false, optional = true }
+leptos_reactive = { version = "0.3.1", default_features = false, optional = true }
+leptos_router = { version = "0.3.1", default_features = false, optional = true }
+serde = { version = "1.0.164", features = ["derive"] }
 tracing = "0.1.37"
 tracing-subscriber = "0.3.17"
-# tokio = { version = "1.28.0", features = ["full"] }
-leptos = { version = "0.2.5", features = ["stable"]}
-leptos_router = { version = "0.2.5", features = ["csr"]}
-leptos_meta = { version = "0.2.5", features = ["csr"]}
+# tokio = { version = "1.28.2", features = ["time"] }
+wasm-bindgen = "=0.2.87"
+styled = "0.1.36"
+stylist = "0.12.1"
+
+[features]
+hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]
+ssr = [
+  "dep:actix-files",
+  "dep:actix-web",
+  "dep:leptos_actix",
+  "leptos/ssr",
+  "leptos_meta/ssr",
+  "leptos_router/ssr",
+]
+
+[package.metadata.cargo-all-features]
+denylist = ["actix-files", "actix-web", "leptos_actix"]
+skip_feature_sets = [["ssr", "hydrate"]]
+
+[package.metadata.leptos]
+output-name = "website"
+site-root = "target/site"
+site-pkg-dir = "pkg"
+assets-dir = "assets"
+site-addr = "127.0.0.1:3000"
+reload-port = 3001
+browserquery = "defaults"
+watch = false
+env = "DEV"
+bin-features = ["ssr"]
+bin-default-features = false
+lib-features = ["hydrate"]
+lib-default-features = false
+style-file = "style/tailwind.css"
+tailwind-input-file = "style/tailwind.css"
+tailwind-config-file = "style/tailwind.config.js"

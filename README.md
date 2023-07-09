@@ -1,27 +1,19 @@
 # website
 
-[austinlake04.com](https://austinlake04.com)
-
-[![Website Status][website-badge]][website-url]
+[![Website Status][website-badge]](https://austinlucaslake.com)
 [![Latest Release][release-badge]][release-url]
 [![License][license-badge]](LICENSE)
 [![CI Status][ci-badge]][ci-url]
 
-[website-badge]: https://img.shields.io/website/https/austinlake04.com.svg
-[website-url]: https://austinlake04.com
-
-[release-badge]: https://img.shields.io/github/v/release/austinlake04/website
-[release-url]: https://github.com/austinlake04/website/releases/latest
-
-[license-badge]: https://img.shields.io/github/license/austinlake04/website
-
-[ci-badge]: https://github.com/austinlake04/website/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/austinlake04/website/actions
+[website-badge]: https://img.shields.io/website/https/austinlucaslake.com.svg
+[release-badge]: https://img.shields.io/github/v/release/austinlucaslake/website
+[release-url]: https://github.com/austinlucaslake/website/releases/latest
+[license-badge]: https://img.shields.io/github/license/austinlucaslake/website
+[ci-badge]: https://github.com/austinlucaslake/website/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/austinlucaslake/website/actions
 
 ## Local Deployment
 
-Part of the build process makes uses of the standalone TailwindCSS CLI executable. Follow [these instructions](https://tailwindcss.com/blog/standalone-cli) to install in locally.
+As a prerequisite, you must install [cargo-leptos](https://github.com/leptos-rs/cargo-leptos). You will then be able to deploy locally using the following command:
 
-Assuming that the TailwindCSS CLI has been installed to this repo's local directory, you can run the following to deploy the site:
-
-`trunk serve --open`
+`cargo leptos watch --hot-reload`
