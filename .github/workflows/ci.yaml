@@ -14,45 +14,52 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  setup:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: nightly
+        components: rustfmt, clippy
+    - name: Install cargo-leptos
+      uses: actions-rs/cargo@v1
+      with:
+        command: install
+        args: --locked cargo-leptos
   test:
+    needs: setup
+    - name: Test
+      uses: actions-rs/cargo@v1
+      with:
+        command: test
+  lint:
+    needs: setup
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          components: rustfmt, clippy
-          override: true
-      - name: Test
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
       - name: Lint
         uses: actions-rs/cargo@v1
         with:
           command: clippy
           args: -- -D warnings
+  format:
+    needs: setup
+    steps:
       - name: Format
         uses: actions-rs/cargo@v1
         with:
           command: fmt
           args: --all -- --check
   build:
+    needs: test
     steps:
-      - name: Install cargo-leptos
-        uses: actions-rs/cargo@v1
-        with:
-          command: install
-          args: --locked cargo-leptos
       - name: Install cargo-leptos
         uses: actions-rs/cargo@v1
         with:
           command: leptos
           args: build --release
   deploy:
-    needs: [test, build]
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -62,7 +69,7 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './dist'
+          path: './target/site'
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v2
