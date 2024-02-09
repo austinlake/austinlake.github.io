@@ -6,95 +6,63 @@ module.exports = {
         },
         extend: {
             keyframes: {
-                typing: {
+				fade: {
+					from: { opacity: 0 },
+					to: { opacity: 1 }
+				},
+				typing: {
                     from: { "width": "0" },
                     to: { "width": "11ch" }
                 },
-                highlight: {
-                    from: { "background-color": "rgb(0, 0, 0)" },
-                    to: { "background-color": "rgb(255, 50, 50)" }
-                },
-                dark_highlight: {
-                    from: { "background-color": "rgb(0, 0, 0)" },
-                    to: { "background-color": "rgb(0, 155, 155)" }
-                },
-                falling: {
-                    from: {
-                        opacity: 0,
-                        transform: "translateY(-50vmin)"
-                    },
-                    
-                    to: {
-                        opacity: 1,
-                        transform: "translateY(0)"
-                    }
-                },
-                fade_in: {
+                twinkle: {
                     "0%": {
-                        opacity: 0,
+                        ":nth-child(1)": { opacity: 0 },
+                        ":nth-child(2)": { opacity: 0.25 },
+                        ":nth-child(3)": { opacity: 0.5 },
+                        ":nth-child(4)": { opacity: 0.75 },
+                        ":nth-child(5)": { opacity: 1 },
                     },
-                    
+                    "20%": { 
+                        ":nth-child(1)": { opacity: 0.25 },
+                        ":nth-child(2)": { opacity: 0.5 },
+                        ":nth-child(3)": { opacity: 0.75 },
+                        ":nth-child(4)": { opacity: 1 },
+                        ":nth-child(5)": { opacity: 0 }
+                    },
+                    "40%": {
+                        ":nth-child(1)": { opacity: 0.5 },
+                        ":nth-child(2)": { opacity: 0.75 },
+                        ":nth-child(3)": { opacity: 0.1 },
+                        ":nth-child(4)": { opacity: 0 },
+                        ":nth-child(5)": { opacity: 0.25 }
+                    },
+                    "60%": {
+                        ":nth-child(1)": { opacity: 0.75 },
+                        ":nth-child(2)": { opacity: 1 },
+                        ":nth-child(3)": { opacity: 0 },
+                        ":nth-child(4)": { opacity: 0.25 },
+                        ":nth-child(5)": { opacity: 0.5 }
+                    },
                     "80%": {
-                        opacity: 0,
+                        ":nth-child(1)": { opacity: 1 },
+                        ":nth-child(2)": { opacity: 0 },
+                        ":nth-child(3)": { opacity: 0.25 },
+                        ":nth-child(4)": { opacity: 0.5 },
+                        ":nth-child(5)": { opacity: 0.75 }
                     },
-
                     "100%": {
-                        opacity: 1,
-                    }
-                },
-                spread6: {
-                    "0%": {
-                        width: 0,
+                        ":nth-child(1)": { opacity: 0 },
+                        ":nth-child(2)": { opacity: 0.25 },
+                        ":nth-child(3)": { opacity: 0.5 },
+                        ":nth-child(4)": { opacity: 0.75 },
+                        ":nth-child(5)": { opacity: 1 }
                     },
-                    "50%": {
-                        width: "1ch",
-                    },                          
-                    "100%": {
-                        width: "6ch",
-                    }
-                },
-                spread5: {
-                    "0%": {
-                        width: 0,
-                    },
-                    "50%": {
-                        width: "1ch",
-                    },                          
-                    "100%": {
-                        width: "5ch",
-                    }
-                },
-                spread3: {
-                    "0%": {
-                        width: 0,
-                    },
-                    "50%": {
-                        width: "1ch",
-                    },                          
-                    "100%": {
-                        width: "3ch",
-                    }
-                },
-                spin: {
-                    "100%": {
-                        "transform": "rotate(360deg)",
                 }
             },
             animation: {
+				fade: "fade 5s linear forward",
                 typing: "typing 2s steps(22)",
-                highlight: "highlight 0.25s linear forwards",
-                highlight_rev: "highlight 0.25s linear backwards",
-                dark_highlight: "dark_highlight 0.25s linear forwards",
-                dark_highlight_rev: "dark_highlight 0.25s linear backwards",
-                falling: "falling 0.5s ease-in forwards",
-                fade_in: "fade_in 5s ease-in forwards",
-                spread6: "spread6 5s ease-in forwards",
-                spread5: "spread5 5s ease-in forwards",
-                spread3: "spread3 5s ease-in forwards",
-                spin1: "spin 10s linear infinite",
-                spin2: "spin 15s linear infinite",
-                spin3: "spin 18s linear infinite",
-                spin4: "spin 20s linear infinite",
+                twinkle: "twinkle 60s linear infinite",
             }
         },
     },
@@ -102,6 +70,4 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
     ]
-}
-
 }
